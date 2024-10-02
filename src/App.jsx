@@ -4,22 +4,26 @@ import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/layout/Layout.jsx';
 import Categories from './pages/Categories.jsx';
+import Profile from './pages/Profile.jsx';
 
 const App = () => {
     return (
-
         <Layout>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/" element={<Home />} />
+
                     <Route path="/failed" element={<Categories />} />
                     <Route path="/ending" element={<Categories />} />
                     <Route path="/all" element={<Categories />} />
                     <Route path="/required" element={<Categories />} />
-                    <Route path="/direct-sale" element={<Categories />} />
+                    <Route path="/directSale" element={<Categories />} />
                 </Routes>
             </BrowserRouter>
         </Layout>
+       
     );
 };
 
